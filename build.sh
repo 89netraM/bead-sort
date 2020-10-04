@@ -1,0 +1,1 @@
+emojicodec ./src/main.emojic -o ./target/main
