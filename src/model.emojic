@@ -26,6 +26,29 @@
 		value ➡ 🐽 matrix row ✖ count ➕ column ❗
 	🍉
 
+	📗
+		If possible, updates the model and returns 👍. Otherwise the model is
+		untouched and the method returns 👎.
+	📗
+	❗ 👣 ➡ 👌 🍇
+		👎 ➡ 🖍🆕 did_something
+
+		🔂 r 🆕⏩ count ➖ 2 -1 ❗ 🍇
+			0 ➡ 🖍🆕 c
+			🔁 c ◀ count 🤝 🐽 👇 r c ❗ 🍇
+				↪ ❎ 🐽 👇 r ➕ 1 c ❗ ❗ 🍇
+					👎 ➡ 🐽 👇 r c ❗
+					👍 ➡ 🐽 👇 r ➕ 1 c ❗
+
+					👍 ➡ 🖍 did_something
+				🍉
+				c ⬅➕ 1
+			🍉
+		🍉
+
+		↩ did_something
+	🍉
+
 	📗 Returns a visual representation of the model. 📗
 	❗ 🔡 ➡ 🔡 🍇
 		🆕🔠 count ✖ count ➕ count ❗ ➡ sb
