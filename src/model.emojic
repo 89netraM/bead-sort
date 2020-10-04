@@ -1,7 +1,7 @@
 📗
 	A model for sorting 🔢 lists with the bead sort algorithm.
 📗
-🐇 🧝‍♀️ 🍇
+🐇 📿 🍇
 	🖍🆕 count 🔢
 	🖍🆕 matrix 🍨🐚👌🍆
 
@@ -53,7 +53,7 @@
 		Completely steps through the model and then collects and returns the
 		numbers in falling order.
 	📗
-	❗ 🔀 ➡ 🍨🐚🔢🍆 🍇
+	❗ 🔗 ➡ 🍨🐚🔢🍆 🍇
 		🆕🍨🐚🔢🍆▶🐴 count ❗ ➡ 🖍🆕 list
 
 		🔁 👣 👇 ❗ 🍇 🍉
