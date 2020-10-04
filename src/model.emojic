@@ -49,6 +49,26 @@
 		↩ did_something
 	🍉
 
+	📗
+		Completely steps through the model and then collects and returns the
+		numbers in falling order.
+	📗
+	❗ 🔀 ➡ 🍨🐚🔢🍆 🍇
+		🆕🍨🐚🔢🍆▶🐴 count ❗ ➡ 🖍🆕 list
+
+		🔁 👣 👇 ❗ 🍇 🍉
+
+		0 ➡ 🖍🆕 c
+		🔂 r 🆕⏩ 0 count ❗ 🍇
+			🔁 c ◀ count 🤝 🐽 👇 r c ❗ 🍇
+				🐻 list count ➖ r ❗
+				c ⬅➕ 1
+			🍉
+		🍉
+
+		↩ list
+	🍉
+
 	📗 Returns a visual representation of the model. 📗
 	❗ 🔡 ➡ 🔡 🍇
 		🆕🔠 count ✖ count ➕ count ❗ ➡ sb
