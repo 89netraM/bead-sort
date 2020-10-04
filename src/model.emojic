@@ -1,0 +1,47 @@
+📗
+	A model for sorting 🔢 lists with the bead sort algorithm.
+📗
+🐇 🧝‍♀️ 🍇
+	🖍🆕 count 🔢
+	🖍🆕 matrix 🍨🐚👌🍆
+
+	📗 Instantiates a new model ready to sort `list`. 📗
+	🆕 list 🍨🐚🔢🍆 🍇
+		📏 list ❓ ➡ 🖍 count
+
+		🆕🍨🐚👌🍆 👎 count ✖ count ❗ ➡ 🖍 matrix
+		🔂 i 🆕⏩ 0 count ❗ 🍇
+			🔂 j 🆕⏩ 0 🐽 list i ❗ ❗ 🍇
+				👍 ➡ 🐽 matrix i ✖ count ➕ j ❗
+			🍉
+		🍉
+	🍉
+
+	📗 Returns the element of the matrix at position `row` `column`. 📗
+	🔐 ❗ 🐽 row 🔢 column 🔢 ➡ 👌 🍇
+		↩ 🐽 matrix row ✖ count ➕ column ❗
+	🍉
+	📗 Sets the element of the matrix at position `row` `column`. 📗
+	🔐 ➡ 🐽 value 👌 row 🔢 column 🔢 🍇
+		value ➡ 🐽 matrix row ✖ count ➕ column ❗
+	🍉
+
+	📗 Returns a visual representation of the model. 📗
+	❗ 🔡 ➡ 🔡 🍇
+		🆕🔠 count ✖ count ➕ count ❗ ➡ sb
+
+		🔂 r 🆕⏩ 0 count ❗ 🍇
+			🔂 c 🆕⏩ 0 count ❗ 🍇
+				↪ 🐽 👇 r c ❗ 🍇
+					🐻 sb 🔤🧿🔤 ❗
+				🍉
+				🙅‍♀️ 🍇
+					🐻 sb 🔤🛫🔤 ❗
+				🍉
+			🍉
+			🐻 sb 🔤❌n🔤 ❗
+		🍉
+
+		↩ 🔡 sb ❗
+	🍉
+🍉
