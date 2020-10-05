@@ -2,28 +2,39 @@
 	A model for sorting 🔢 lists with the bead sort algorithm.
 📗
 🐇 📿 🍇
-	🖍🆕 count 🔢
+	🖍🆕 rows 🔢
+	🖍🆕 columns 🔢
 	🖍🆕 matrix 🍨🐚👌🍆
 
 	📗 Instantiates a new model ready to sort `list`. 📗
 	🆕 list 🍨🐚🔢🍆 🍇
-		📏 list ❓ ➡ 🖍 count
+		🍇 a 🔢 b 🔢 ➡ 🔢
+			↪ a ▶ b 🍇
+				↩ a
+			🍉
+			🙅‍♀️ 🍇
+				↩ b
+			🍉
+		🍉 ➡ max
 
-		🆕🍨🐚👌🍆 👎 count ✖ count ❗ ➡ 🖍 matrix
-		🔂 i 🆕⏩ 0 count ❗ 🍇
+		📏 list ❓ ➡ 🖍 rows
+		🍺 🐧 list max ❗ ➡ 🖍 columns
+
+		🆕🍨🐚👌🍆 👎 rows ✖ columns ❗ ➡ 🖍 matrix
+		🔂 i 🆕⏩ 0 rows ❗ 🍇
 			🔂 j 🆕⏩ 0 🐽 list i ❗ ❗ 🍇
-				👍 ➡ 🐽 matrix i ✖ count ➕ j ❗
+				👍 ➡ 🐽 matrix i ✖ columns ➕ j ❗
 			🍉
 		🍉
 	🍉
 
 	📗 Returns the element of the matrix at position `row` `column`. 📗
 	🔐 ❗ 🐽 row 🔢 column 🔢 ➡ 👌 🍇
-		↩ 🐽 matrix row ✖ count ➕ column ❗
+		↩ 🐽 matrix row ✖ columns ➕ column ❗
 	🍉
 	📗 Sets the element of the matrix at position `row` `column`. 📗
 	🔐 ➡ 🐽 value 👌 row 🔢 column 🔢 🍇
-		value ➡ 🐽 matrix row ✖ count ➕ column ❗
+		value ➡ 🐽 matrix row ✖ columns ➕ column ❗
 	🍉
 
 	📗
@@ -33,9 +44,9 @@
 	❗ 👣 ➡ 👌 🍇
 		👎 ➡ 🖍🆕 did_something
 
-		🔂 r 🆕⏩ count ➖ 2 -1 ❗ 🍇
+		🔂 r 🆕⏩ rows ➖ 2 -1 ❗ 🍇
 			0 ➡ 🖍🆕 c
-			🔁 c ◀ count 🤝 🐽 👇 r c ❗ 🍇
+			🔁 c ◀ columns 🤝 🐽 👇 r c ❗ 🍇
 				↪ ❎ 🐽 👇 r ➕ 1 c ❗ ❗ 🍇
 					👎 ➡ 🐽 👇 r c ❗
 					👍 ➡ 🐽 👇 r ➕ 1 c ❗
@@ -51,19 +62,19 @@
 
 	📗
 		Completely steps through the model and then collects and returns the
-		numbers in falling order.
+		numbers in order.
 	📗
 	❗ 🔗 ➡ 🍨🐚🔢🍆 🍇
-		🆕🍨🐚🔢🍆▶🐴 count ❗ ➡ 🖍🆕 list
+		🆕🍨🐚🔢🍆▶🐴 rows ❗ ➡ 🖍🆕 list
 
 		🔁 👣 👇 ❗ 🍇 🍉
 
 		0 ➡ 🖍🆕 c
-		🔂 r 🆕⏩ 0 count ❗ 🍇
-			🔁 c ◀ count 🤝 🐽 👇 r c ❗ 🍇
-				🐻 list count ➖ r ❗
+		🔂 r 🆕⏩ 0 rows ❗ 🍇
+			🔁 c ◀ columns 🤝 🐽 👇 r c ❗ 🍇
 				c ⬅➕ 1
 			🍉
+			🐻 list c ❗
 		🍉
 
 		↩ list
@@ -71,10 +82,10 @@
 
 	📗 Returns a visual representation of the model. 📗
 	❗ 🔡 ➡ 🔡 🍇
-		🆕🔠 count ✖ count ➕ count ❗ ➡ sb
+		🆕🔠 rows ✖ columns ➕ rows ❗ ➡ sb
 
-		🔂 r 🆕⏩ 0 count ❗ 🍇
-			🔂 c 🆕⏩ 0 count ❗ 🍇
+		🔂 r 🆕⏩ 0 rows ❗ 🍇
+			🔂 c 🆕⏩ 0 columns ❗ 🍇
 				↪ 🐽 👇 r c ❗ 🍇
 					🐻 sb 🔤🧿🔤 ❗
 				🍉
