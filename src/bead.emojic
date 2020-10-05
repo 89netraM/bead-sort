@@ -1,0 +1,41 @@
+📗
+	A physical model of a bead that falls downwards.
+📗
+🕊 🧿 🍇
+	🖍🆕 y_position 💯
+	🖍🆕 y_speed 💯
+
+	📗 Instantiates a new bead at height `y_position`. 📗
+	🆕 🍼 y_position 💯 🍇
+		0 ➡ 🖍 y_speed
+	🍉
+
+	📗 Returns the y-position of this bead. 📗
+	❓ 📏 ➡ 💯 🍇
+		↩ y_position
+	🍉
+
+	📗 Checks if this bead intersects a line a height `height`. 📗
+	❓ 🌤 height 💯 ➡ 👌 🍇
+		💭 Radius is 0.5m
+		↩ y_position ➖ 0.5 ◀ height 🤝 height ◀ y_position ➕ 0.5
+	🍉
+
+	📗 Checks if this bead is on top of the `other` bead. 📗
+	❓ ⛅ other 🧿 ➡ 👌 🍇
+		💭 Radius is 0.5m
+		↩ 🌤 other y_position ➖ 0.5 ❓
+	🍉
+
+	📗 Flips and reduces this beads speed (should be used when bouncing). 📗
+	🖍❗ ⛹️‍♀️ 🍇
+		y_speed ⬅✖ -0.25 💭 Reduce the speed to 25%
+	🍉
+
+	📗 Steps this bead `delta_time` seconds thorough the simulation. 📗
+	🖍❗ 👣 delta_time 💯 🍇
+		y_position ⬅➕ y_speed ✖ delta_time
+		💭 Gravity is 10m/s²
+		y_speed ⬅➖ 9.82 ✖ delta_time
+	🍉
+🍉

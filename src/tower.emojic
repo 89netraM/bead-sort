@@ -1,0 +1,54 @@
+📜 🔤bead.emojic🔤
+
+📗
+	A tower of beads that might lay on top of each other.
+	Otherwise the simulation can be run until the do.
+📗
+🐇 🗼 🍇
+	🖍🆕 beads 🍨🐚🧿🍆
+
+	📗 Instantiates a new empty tower. 📗
+	🆕 🍇
+		🆕🍨🐚🧿🍆 ❗ ➡ 🖍 beads
+	🍉
+
+	📗 Adds a new bead at height `y_position`. 📗
+	❗ ☔ y_position 💯 🍇
+		🐻 beads 🆕🧿 y_position ❗ ❗
+	🍉
+
+	📗 Returns 👍 if any of the beads in this tower is at height `height`. 📗
+	❓ 🌤 height 💯 ➡ 👌 🍇
+		🔂 bead beads 🍇
+			↪ 🌤 bead height ❓ 🍇
+				↩ 👍
+			🍉
+		🍉
+
+		↩ 👎
+	🍉
+
+	📗 Steps this tower `delta_time` seconds thorough the simulation. 📗
+	❗ 👣 delta_time 💯 🍇
+		🔂 i 🆕⏩ 0 📏 beads ❓ ❗ 🍇
+			👣 🐽 beads i ❗ delta_time ❗
+
+			💭 If the bead is on top of the next,
+			💭 or if it's at the floor (0); bounce!
+			↪ i ➕ 1 ◀ 📏 beads ❓ 🤝 ⛅ 🐽 beads i ❗ 🐽 beads i ➕ 1 ❗ ❓ 👐 🌤 🐽 beads i ❗ 0 ❓ 🍇
+				⛹️‍♀️ 🐽 beads i ❗ ❗
+			🍉
+		🍉
+	🍉
+
+	📗 Returns a visual representation of this tower. 📗
+	❗ 🔡 ➡ 🔡 🍇
+		🆕🔠 📏 beads ❓ ✖ 3 ❗ ➡ sb
+
+		🔂 bead beads 🍇
+			🐻 sb 🔤🧲📏 bead ❓🧲, 🔤 ❗
+		🍉
+
+		↩ 🔡 sb ❗
+	🍉
+🍉

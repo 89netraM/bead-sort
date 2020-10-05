@@ -1,10 +1,12 @@
+📜 🔤tower.emojic🔤
+
 📗
 	A model for sorting 🔢 lists with the bead sort algorithm.
 📗
 🐇 📿 🍇
 	🖍🆕 rows 🔢
 	🖍🆕 columns 🔢
-	🖍🆕 matrix 🍨🐚👌🍆
+	🖍🆕 towers 🍨🐚🗼🍆
 
 	📗 Instantiates a new model ready to sort `list`. 📗
 	🆕 list 🍨🐚🔢🍆 🍇
@@ -20,58 +22,31 @@
 		📏 list ❓ ➡ 🖍 rows
 		🍺 🐧 list max ❗ ➡ 🖍 columns
 
-		🆕🍨🐚👌🍆 👎 rows ✖ columns ❗ ➡ 🖍 matrix
-		🔂 i 🆕⏩ 0 rows ❗ 🍇
-			🔂 j 🆕⏩ 0 🐽 list i ❗ ❗ 🍇
-				👍 ➡ 🐽 matrix i ✖ columns ➕ j ❗
+		🆕🍨🐚🗼🍆▶🐴 columns ❗ ➡ 🖍 towers
+		🔂 c 🆕⏩ 0 columns ❗ 🍇
+			🐻 towers 🆕🗼 ❗ ❗
+		🍉
+		🔂 r 🆕⏩ 0 rows ❗ 🍇
+			🔂 c 🆕⏩ 0 🐽 list r ❗ ❗ 🍇
+				☔ 🐽 towers c ❗ 💯 rows ➖ r ❗ ❗
 			🍉
 		🍉
 	🍉
 
-	📗 Returns the element of the matrix at position `row` `column`. 📗
-	🔐 ❗ 🐽 row 🔢 column 🔢 ➡ 👌 🍇
-		↩ 🐽 matrix row ✖ columns ➕ column ❗
-	🍉
-	📗 Sets the element of the matrix at position `row` `column`. 📗
-	🔐 ➡ 🐽 value 👌 row 🔢 column 🔢 🍇
-		value ➡ 🐽 matrix row ✖ columns ➕ column ❗
-	🍉
-
-	📗
-		If possible, updates the model and returns 👍. Otherwise the model is
-		untouched and the method returns 👎.
-	📗
-	❗ 👣 ➡ 👌 🍇
-		👎 ➡ 🖍🆕 did_something
-
-		🔂 r 🆕⏩ rows ➖ 2 -1 ❗ 🍇
-			0 ➡ 🖍🆕 c
-			🔁 c ◀ columns 🤝 🐽 👇 r c ❗ 🍇
-				↪ ❎ 🐽 👇 r ➕ 1 c ❗ ❗ 🍇
-					👎 ➡ 🐽 👇 r c ❗
-					👍 ➡ 🐽 👇 r ➕ 1 c ❗
-
-					👍 ➡ 🖍 did_something
-				🍉
-				c ⬅➕ 1
-			🍉
+	📗 Steps the model by `delta_time` seconds. 📗
+	❗ 👣 delta_time 💯 🍇
+		🔂 tower towers 🍇
+			👣 tower delta_time ❗
 		🍉
-
-		↩ did_something
 	🍉
 
-	📗
-		Completely steps through the model and then collects and returns the
-		numbers in order.
-	📗
+	📗 Collects and returns the numbers in their current order. 📗
 	❗ 🔗 ➡ 🍨🐚🔢🍆 🍇
 		🆕🍨🐚🔢🍆▶🐴 rows ❗ ➡ 🖍🆕 list
 
-		🔁 👣 👇 ❗ 🍇 🍉
-
-		0 ➡ 🖍🆕 c
-		🔂 r 🆕⏩ 0 rows ❗ 🍇
-			🔁 c ◀ columns 🤝 🐽 👇 r c ❗ 🍇
+		🔂 r 🆕⏩ rows ➖ 1 -1 ❗ 🍇
+			0 ➡ 🖍🆕 c
+			🔁 c ◀ columns 🤝 🌤 🐽 towers c ❗ 💯 r ❗ ❓ 🍇
 				c ⬅➕ 1
 			🍉
 			🐻 list c ❗
@@ -84,9 +59,9 @@
 	❗ 🔡 ➡ 🔡 🍇
 		🆕🔠 rows ✖ columns ➕ rows ❗ ➡ sb
 
-		🔂 r 🆕⏩ 0 rows ❗ 🍇
+		🔂 r 🆕⏩ rows -1 ❗ 🍇
 			🔂 c 🆕⏩ 0 columns ❗ 🍇
-				↪ 🐽 👇 r c ❗ 🍇
+				↪ 🌤 🐽 towers c ❗ 💯 r ❗ ❓ 🍇
 					🐻 sb 🔤🧿🔤 ❗
 				🍉
 				🙅‍♀️ 🍇
